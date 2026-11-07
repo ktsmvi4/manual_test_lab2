@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบลงทะเบียน - Manual Testing Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>ฟอร์มสมัครสมาชิก (Practice Form)</h2>
+    
+    <form id="registerForm">
+      <!-- ชื่อ-นามสกุล -->
+      <div class="form-group">
+        <label for="fullname">ชื่อ - นามสกุล <span class="required">*</span></label>
+        <input type="text" id="fullname" name="fullname" placeholder="กรอกชื่อ-นามสกุล (3 - 50 ตัวอักษร)" minlength="3" maxlength="50" required>
+      </div>
+
+      <!-- อีเมล -->
+      <div class="form-group">
+        <label for="email">อีเมล <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+      </div>
+
+      <!-- รหัสผ่าน -->
+      <div class="form-group">
+        <label for="password">รหัสผ่าน <span class="required">*</span></label>
+        <input type="password" id="password" name="password" placeholder="อย่างน้อย 8 ตัวอักษร" minlength="8" required>
+      </div>
+
+      <!-- ยืนยันรหัสผ่าน -->
+      <div class="form-group">
+        <label for="confirmPassword">ยืนยันรหัสผ่าน <span class="required">*</span></label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <!-- อายุ -->
+      <div class="form-group">
+        <label for="age">อายุ (ปี)</label>
+        <input type="number" id="age" name="age" min="18" max="99" placeholder="18 - 99">
+      </div>
+
+      <!-- เพศ -->
+      <div class="form-group">
+        <label>เพศ</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male"> ชาย</label>
+          <label><input type="radio" name="gender" value="female"> หญิง</label>
+          <label><input type="radio" name="gender" value="other"> อื่นๆ</label>
+        </div>
+      </div>
+
+      <!-- บทบาท/ประเภทผู้ใช้ -->
+      <div class="form-group">
+        <label for="role">ประเภทผู้ใช้งาน</label>
+        <select id="role" name="role">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="student">นักศึกษา</option>
+          <option value="developer">Developer</option>
+          <option value="tester">Tester</option>
+        </select>
+      </div>
+
+      <!-- ยินยอมเงื่อนไข -->
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">ฉันยอมรับเงื่อนไขและข้อตกลง <span class="required">*</span></label>
+      </div>
+
+      <!-- ปุ่มกด -->
+      <div class="button-group">
+        <button type="submit" id="btnSubmit">ลงทะเบียน</button>
+        <button type="reset" id="btnReset">ล้างข้อมูล</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
